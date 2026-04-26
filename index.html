@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beniel's Beauty Training College & Salon | Kisumu, Kenya</title>
+<meta name="description" content="Premier beauty training college and salon in Kisumu, Kenya. Offering cosmetology, hairdressing, makeup artistry, nail technology and beauty therapy courses.">
+<meta name="keywords" content="beauty school Kisumu, cosmetology training Kenya, makeup artistry Kisumu, beauty college Kenya, hairdressing school Kisumu">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://ik.imagekit.io" crossorigin>
+<link rel="preload" as="image" href="https://ik.imagekit.io/lrj2sofys/beniels%20class/beniels%20dash/IMG-20260325-WA0039.jpg?updatedAt=1774815461035&tr=w-1400,q-75,f-webp" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<style id="aosFallback">
+  /* Fallback activated only via JS if AOS fails to load */
+</style>
+<style>
+  /* ─── GLOBAL OVERFLOW & MOBILE BASE ─────────── */
+  html, body { max-width: 100%; overflow-x: hidden; }
+  img { max-width: 100%; height: auto; display: block; }
+
+  :root {
+    --blush: #ffb3d1;
+    --blush-light: #fff0f6;
+    --rose: #ff69b4;
+    --rose-deep: #e0006e;
+    --gold: #d4a800;
+    --gold-light: #f5e070;
+    --nude: #fff8e7;
+    --nude-dark: #f0dfa0;
+    --cream: #fffdf5;
+    --white: #ffffff;
+    --soft-black: #1a1a1a;
+    --text-mid: #4a3a2a;
+    --text-light: #9a8060;
+    --glass: rgba(255,255,255,0.65);
+    --shadow-rose: 0 8px 40px rgba(224,0,110,0.18);
+    --shadow-soft: 0 4px 30px rgba(0,0,0,0.08);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; min-width: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--soft-black);
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* ─── CUSTOM CURSOR ─────────────────────────── */
+  .cursor {
+    width: 12px; height: 12px;
+    background: var(--rose);
+    border-radius: 50%;
+    position: fixed; pointer-events: none; z-index: 9999;
+    transform: translate(-50%,-50%);
+    transition: transform 0.1s, width 0.3s, height 0.3s, background 0.3s;
+  }
+  .cursor-follower {
+    width: 36px; height: 36px;
+    border: 1.5px solid var(--rose);
+    border-radius: 50%;
+    position: fixed; pointer-events: none; z-index: 9998;
+    transform: translate(-50%,-50%);
+    transition: transform 0.18s ease, width 0.3s, height 0.3s, opacity 0.3s;
+    opacity: 0.5;
+  }
+  .cursor.hovered { width: 20px; height: 20px; background: var(--gold); }
+  .cursor-follower.hovered { width: 56px; height: 56px; opacity: 0.2; }
+
+  /* ─── LOADER ─────────────────────────────────── */
+  #loader {
+    position: fixed; inset: 0; z-index: 10000;
+    background: var(--cream);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s;
+  }
+  #loader.hidden { opacity: 0; visibility: hidden; }
+  .loader-monogram {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem; font-weight: 300; letter-spacing: 0.1em;
+    color: var(--rose-deep);
+    animation: loaderPulse 1s ease-in-out infinite;
+  }
+  .loader-line {
+    width: 0; height: 1.5px;
+    background: linear-gradient(90deg, transparent, var(--rose), var(--gold), transparent);
+    margin-top: 1rem;
+    animation: loaderExpand 0.6s ease forwards 0.1s;
+  }
+  @keyframes loaderPulse { 0%,100%{opacity:0.4;transform:scale(0.97)} 50%{opacity:1;transform:scale(1)} }
+  @keyframes loaderExpand { to { width: 200px; } }
+
+  /* ─── FLOATING PETALS ────────────────────────── */
+  .petal {
+    position: fixed; pointer-events: none; z-index: 1;
+    width: 8px; height: 8px;
+    background: radial-gradient(circle, var(--blush), var(--rose));
+    border-radius: 50% 0 50% 0;
+    opacity: 0;
+    animation: petalFall linear infinite;
+  }
+  @keyframes petalFall {
+    0%  { transform: translateY(-10px) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.3; }
+    100%{ transform: translateY(100vh) rotate(720deg); opacity: 0; }
+  }
+
+  /* ─── NAVBAR ─────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 1.2rem 6%;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: all 0.5s ease;
+  }
+  nav.scrolled {
+    background: rgba(253,248,245,0.88);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(212,168,118,0.2);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+    padding: 0.9rem 6%;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 500; letter-spacing: 0.05em;
+    color: var(--soft-black); text-decoration: none;
+    display: flex; flex-direction: column; line-height: 1.1;
+  }
+  .nav-logo span { font-size: 0.65rem; letter-spacing: 0.2em; font-family: 'Jost', sans-serif; font-weight: 300; color: var(--rose); text-transform: uppercase; }
+  .nav-links {
+    display: flex; gap: 2.5rem; list-style: none; align-items: center;
+  }
+  .nav-links a {
+    font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--soft-black); text-decoration: none; font-weight: 400;
+    position: relative; transition: color 0.3s;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px;
+    background: var(--rose); transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--rose); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    background: linear-gradient(135deg, var(--rose-deep), var(--rose));
+    color: white !important; padding: 0.55rem 1.5rem; border-radius: 50px;
+    font-size: 0.75rem !important; letter-spacing: 0.12em !important;
+    transition: all 0.3s ease !important; box-shadow: 0 4px 20px rgba(168,84,102,0.3);
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(168,84,102,0.4) !important; }
+  .nav-cta::after { display: none !important; }
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px; cursor: pointer;
+    background: none; border: none; padding: 4px;
+  }
+  .hamburger span {
+    display: block; width: 24px; height: 1.5px;
+    background: var(--soft-black); transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none; position: fixed; inset: 0; z-index: 999;
+    background: var(--cream); flex-direction: column;
+    align-items: center; justify-content: center; gap: 2.5rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem; font-weight: 300; color: var(--soft-black);
+    text-decoration: none; letter-spacing: 0.05em; transition: color 0.3s;
+  }
+  .mobile-menu a:hover { color: var(--rose); }
+  .mobile-close {
+    position: absolute; top: 1.5rem; right: 6%;
+    font-size: 1.5rem; background: none; border: none; cursor: pointer; color: var(--soft-black);
+  }
+
+  /* ─── HERO ───────────────────────────────────── */
+  #hero {
+    height: 100vh; position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    z-index: 0;
+  }
+  .hero-slide {
+    position: absolute; inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.08);
+    transition: opacity 1.4s cubic-bezier(0.4,0,0.2,1), transform 8s ease-out;
+    will-change: opacity, transform;
+  }
+  .hero-slide.active {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+  .hero-slide.prev {
+    opacity: 0;
+    transform: scale(1.12);
+    transition: opacity 1.4s cubic-bezier(0.4,0,0.2,1), transform 1.4s ease-in;
+  }
+  .hero-slide-dots {
+    position: absolute; bottom: 5rem; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 0.5rem; z-index: 3;
+  }
+  .hero-slide-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: rgba(255,255,255,0.4); border: none; padding: 0; cursor: pointer;
+    transition: all 0.4s;
+  }
+  .hero-slide-dot.active { background: var(--gold); width: 20px; border-radius: 3px; }
+  @keyframes heroBgZoom { 0%{transform:scale(1.05)} 100%{transform:scale(1.15)} }
+  .hero-overlay {
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(160deg, rgba(10,5,5,0.55) 0%, rgba(10,5,5,0.3) 50%, rgba(10,5,5,0.6) 100%);
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center; max-width: 900px; padding: 0 2rem;
+  }
+  .hero-eyebrow {
+    font-size: 0.82rem; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--gold); font-weight: 400; margin-bottom: 1.5rem;
+    opacity: 0; animation: fadeSlideUp 0.6s ease forwards 0.6s;
+    display: flex; align-items: center; justify-content: center; gap: 1rem;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; display: block; width: 40px; height: 1px; background: var(--gold); opacity: 0.6;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(4.2rem, 11vw, 10rem);
+    font-weight: 300; line-height: 1.08; letter-spacing: 0.01em;
+    color: var(--white); margin-bottom: 1.5rem;
+    opacity: 0; animation: fadeSlideUp 0.8s ease forwards 0.8s;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
+  .hero-title em { font-style: italic; color: var(--rose); }
+  .hero-sub {
+    font-size: 1.12rem; font-weight: 300; color: rgba(255,255,255,0.85); letter-spacing: 0.05em;
+    max-width: 520px; margin: 0 auto 2.5rem;
+    opacity: 0; animation: fadeSlideUp 0.7s ease forwards 1.1s;
+    line-height: 1.9;
+  }
+  .hero-btns {
+    display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;
+    opacity: 0; animation: fadeSlideUp 0.7s ease forwards 1.3s;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--rose-deep), var(--rose));
+    color: white; padding: 0.9rem 2.5rem; border-radius: 50px;
+    font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
+    text-decoration: none; border: none; cursor: none;
+    transition: all 0.4s ease; font-family: 'Jost', sans-serif; font-weight: 400;
+    box-shadow: 0 6px 30px rgba(168,84,102,0.35);
+    position: relative; overflow: hidden;
+  }
+  .btn-primary::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--gold), var(--rose));
+    opacity: 0; transition: opacity 0.4s;
+  }
+  .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 40px rgba(168,84,102,0.45); }
+  .btn-primary:hover::after { opacity: 1; }
+  .btn-primary span { position: relative; z-index: 1; }
+  .btn-outline {
+    background: transparent; color: rgba(255,255,255,0.9);
+    padding: 0.9rem 2.5rem; border-radius: 50px;
+    font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
+    text-decoration: none; border: 1.5px solid rgba(255,255,255,0.4); cursor: none;
+    transition: all 0.4s ease; font-family: 'Jost', sans-serif; font-weight: 400;
+    backdrop-filter: blur(10px);
+  }
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.8);
+    color: white; transform: translateY(-3px);
+  }
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem; z-index: 3;
+    opacity: 0; animation: fadeSlideUp 0.7s ease forwards 1.8s;
+  }
+  .hero-scroll span {
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+  .scroll-line {
+    width: 1px; height: 50px;
+    background: linear-gradient(to bottom, var(--rose), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse { 0%,100%{opacity:0.3;transform:scaleY(0.8)} 50%{opacity:1;transform:scaleY(1)} }
+  @keyframes fadeSlideUp { from{opacity:0;transform:translateY(25px)} to{opacity:1;transform:translateY(0)} }
+
+  /* ─── SECTION COMMON ─────────────────────────── */
+  section { position: relative; overflow: hidden; }
+  .section-tag {
+    font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--rose); font-weight: 400; margin-bottom: 0.8rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .section-tag::before { content: '◆'; font-size: 0.5rem; }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 300; line-height: 1.15; letter-spacing: 0.01em;
+    color: var(--soft-black);
+  }
+  .section-title em { font-style: italic; color: var(--rose-deep); }
+  .divider {
+    width: 60px; height: 1.5px;
+    background: linear-gradient(90deg, var(--rose), var(--gold));
+    margin: 1.5rem 0;
+  }
+
+  /* ─── ABOUT ──────────────────────────────────── */
+  #about {
+    padding: 8rem 6%;
+    background: var(--white);
+  }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem;
+    max-width: 1200px; margin: 0 auto; align-items: center;
+  }
+  .about-img-wrap {
+    position: relative; aspect-ratio: 3/4; max-height: 600px;
+  }
+  .about-img-main {
+    width: 100%; height: 100%; object-fit: cover; border-radius: 4px;
+    filter: brightness(0.96) saturate(1.1);
+  }
+  .about-img-accent {
+    position: absolute; bottom: -2rem; right: -2rem;
+    width: 55%; aspect-ratio: 1;
+    object-fit: cover; border-radius: 4px;
+    border: 6px solid var(--cream);
+    box-shadow: var(--shadow-soft);
+  }
+  .about-badge {
+    position: absolute; top: 2rem; left: -2rem;
+    background: linear-gradient(135deg, var(--rose-deep), var(--rose));
+    color: white; padding: 1.2rem 1.5rem; border-radius: 4px; text-align: center;
+    box-shadow: 0 8px 30px rgba(168,84,102,0.3);
+  }
+  .about-badge .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem; font-weight: 300; line-height: 1; display: block;
+  }
+  .about-badge .label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.85; }
+  .about-text p {
+    color: var(--text-mid); line-height: 2; font-size: 0.95rem; font-weight: 300;
+    margin-bottom: 1.2rem;
+  }
+  .about-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .stat-item { text-align: center; padding: 1.2rem; background: var(--cream); border-radius: 8px; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem; font-weight: 300; color: var(--rose-deep); display: block;
+  }
+  .stat-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+
+  /* ─── COURSES ─────────────────────────────────── */
+  #courses {
+    padding: 8rem 6%;
+    background: linear-gradient(160deg, var(--cream) 0%, var(--nude) 100%);
+  }
+  .courses-header { max-width: 1200px; margin: 0 auto 4rem; text-align: center; }
+  .courses-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; max-width: 1200px; margin: 0 auto;
+  }
+  .course-card {
+    background: var(--white); border-radius: 16px; overflow: hidden;
+    border: 1px solid rgba(212,168,118,0.15);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: none;
+  }
+  .course-card:hover { transform: translateY(-12px); box-shadow: var(--shadow-rose); }
+  .course-card-img {
+    height: 220px; overflow: hidden; position: relative;
+  }
+  .course-card-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    filter: brightness(0.95) saturate(1.1);
+  }
+  .course-card:hover .course-card-img img { transform: scale(1.08); }
+  .course-card-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(168,84,102,0.5), transparent 60%);
+    opacity: 0; transition: opacity 0.4s;
+  }
+  .course-card:hover .course-card-img-overlay { opacity: 1; }
+  .course-card-body { padding: 1.8rem; }
+  .course-icon {
+    font-size: 1.8rem; margin-bottom: 0.8rem; display: block;
+  }
+  .course-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 400; color: var(--soft-black); margin-bottom: 0.6rem;
+  }
+  .course-card p {
+    font-size: 0.85rem; color: var(--text-light); line-height: 1.8; margin-bottom: 1.2rem;
+    font-weight: 300;
+  }
+  .course-tag {
+    display: inline-block; padding: 0.3rem 0.9rem;
+    background: var(--blush-light); color: var(--rose-deep);
+    border-radius: 50px; font-size: 0.7rem; letter-spacing: 0.1em;
+    text-transform: uppercase; font-weight: 400;
+  }
+  .course-link {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--rose); text-decoration: none; margin-top: 1rem; font-weight: 400;
+    transition: gap 0.3s;
+  }
+  .course-link:hover { gap: 0.9rem; }
+
+  /* ─── SALON SERVICES ─────────────────────────── */
+  #services {
+    padding: 8rem 6%;
+    background: var(--soft-black);
+    position: relative;
+  }
+  #services::before {
+    content: ''; position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 50% at 20% 50%, rgba(168,84,102,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 50%, rgba(212,168,118,0.1) 0%, transparent 50%);
+  }
+  .services-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+  .services-header { max-width: 500px; margin-bottom: 4rem; }
+  .services-header .section-tag { color: var(--gold); }
+  .services-header .section-title { color: var(--white); }
+  .services-header .section-title em { color: var(--gold); }
+  .services-header p { color: rgba(255,255,255,0.55); font-weight: 300; line-height: 1.9; margin-top: 1rem; font-size: 0.9rem; }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px;
+    border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; overflow: hidden;
+  }
+  .service-item {
+    padding: 2.5rem 2rem; border-right: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.4s; cursor: none;
+    position: relative; overflow: hidden;
+  }
+  .service-item:last-child { border-right: none; }
+  .service-item::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(168,84,102,0.2), rgba(212,168,118,0.1));
+    opacity: 0; transition: opacity 0.4s;
+  }
+  .service-item:hover::before { opacity: 1; }
+  .service-emoji { font-size: 2rem; margin-bottom: 1rem; display: block; }
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; color: var(--white); margin-bottom: 0.5rem; font-weight: 400;
+  }
+  .service-desc { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.7; font-weight: 300; }
+  .service-price {
+    display: inline-block; margin-top: 1rem;
+    font-size: 0.75rem; color: var(--gold); letter-spacing: 0.1em;
+  }
+
+  /* ─── GALLERY ─────────────────────────────────── */
+  #gallery {
+    padding: 8rem 6%;
+    background: var(--cream);
+  }
+  .gallery-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem; max-width: 1200px; margin: 0 auto;
+  }
+  .gallery-item {
+    overflow: hidden; border-radius: 8px; cursor: none;
+    position: relative;
+  }
+  .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+  .gallery-item:nth-child(6) { grid-column: span 2; }
+  .gallery-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    filter: brightness(0.95) saturate(1.05);
+    min-height: 200px;
+  }
+  .gallery-item:hover img { transform: scale(1.08); }
+  .gallery-item-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(168,84,102,0.65), transparent 50%);
+    opacity: 0; transition: opacity 0.4s; display: flex;
+    align-items: flex-end; padding: 1.5rem;
+  }
+  .gallery-item:hover .gallery-item-overlay { opacity: 1; }
+  .gallery-item-overlay span {
+    color: white; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .gallery-footer { text-align: center; margin-top: 3rem; }
+  .gallery-footer p { font-size: 0.85rem; color: var(--text-light); letter-spacing: 0.05em; }
+  .gallery-footer a { color: var(--rose); text-decoration: none; }
+
+  /* ─── CLASS OF 2025 ──────────────────────────── */
+  #class2025 {
+    padding: 8rem 6%;
+    background: linear-gradient(160deg, #1a0a0a 0%, #2a0d1a 50%, #1a0a0a 100%);
+    position: relative; overflow: hidden;
+  }
+  #class2025::before {
+    content: '2025';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20rem; font-weight: 300;
+    color: rgba(255,255,255,0.02);
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none; white-space: nowrap;
+    letter-spacing: 0.1em;
+  }
+  .class2025-inner { max-width: 1300px; margin: 0 auto; position: relative; z-index: 1; }
+  .class2025-header { text-align: center; margin-bottom: 4rem; }
+  .class2025-header .section-tag { color: var(--gold); justify-content: center; }
+  .class2025-header .section-title { color: var(--white); }
+  .class2025-header .section-title em { color: var(--gold); }
+  .class2025-header p { color: rgba(255,255,255,0.45); font-size:0.88rem; font-weight:300; margin-top:1rem; line-height:1.9; }
+  .grad-slideshow-wrap {
+    position: relative; overflow: hidden; border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    max-width: 900px; margin: 0 auto;
+  }
+  .grad-slideshow-track {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .grad-slideshow-slide {
+    min-width: 100%; position: relative;
+  }
+  .grad-slideshow-slide img {
+    width: 100%; height: 560px; object-fit: cover; display: block;
+    filter: brightness(0.92) saturate(1.1);
+  }
+  .grad-slideshow-slide-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 2rem 2rem 1.5rem;
+    background: linear-gradient(to top, rgba(212,168,0,0.55), transparent);
+    color: white; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+  }
+  .grad-slideshow-dots {
+    display: flex; gap: 0.6rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;
+  }
+  .grad-slideshow-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255,255,255,0.2); border: none; cursor: pointer;
+    transition: all 0.3s; padding: 0;
+  }
+  .grad-slideshow-dot.active { background: var(--gold); width: 24px; border-radius: 4px; }
+  @media (max-width: 768px) {
+    .grad-slideshow-slide img { height: 300px; }
+  }
+  #at-beniels {
+    padding: 5rem 6% 8rem;
+    background: var(--soft-black);
+  }
+  .at-beniels-inner { max-width: 1200px; margin: 0 auto; }
+  .at-beniels-header { text-align: center; margin-bottom: 3rem; }
+  .at-beniels-header .section-tag { color: var(--gold); justify-content: center; }
+  .at-beniels-header .section-title { color: var(--white); }
+  .at-beniels-header .section-title em { color: var(--gold); }
+  .slideshow-wrap {
+    position: relative; overflow: hidden; border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    max-width: 900px; margin: 0 auto;
+  }
+  .slideshow-track {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .slideshow-slide {
+    min-width: 100%; position: relative;
+  }
+  .slideshow-slide img {
+    width: 100%; height: 520px; object-fit: cover; display: block;
+    filter: brightness(0.92);
+  }
+  .slideshow-slide-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 2rem 2rem 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+  }
+  .slideshow-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.15); backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2); color: white;
+    width: 48px; height: 48px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 1.1rem; transition: all 0.3s; z-index: 5;
+  }
+  .slideshow-btn:hover { background: var(--rose); border-color: var(--rose); }
+  .slideshow-btn.prev { left: 1.2rem; }
+  .slideshow-btn.next { right: 1.2rem; }
+  .slideshow-dots {
+    display: flex; gap: 0.6rem; justify-content: center; margin-top: 1.5rem;
+  }
+  .slideshow-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255,255,255,0.25); border: none; cursor: pointer;
+    transition: all 0.3s; padding: 0;
+  }
+  .slideshow-dot.active { background: var(--gold); width: 24px; border-radius: 4px; }
+  @media (max-width: 768px) {
+    .slideshow-slide img { height: 280px; }
+  }
+
+  /* ─── TESTIMONIALS ───────────────────────────── */
+  #testimonials {
+    padding: 8rem 6%;
+    background: linear-gradient(135deg, var(--blush-light), var(--nude));
+    position: relative; overflow: hidden;
+  }
+  #testimonials::before {
+    content: '❝'; font-size: 20rem; font-family: 'Cormorant Garamond', serif;
+    color: rgba(168,84,102,0.07);
+    position: absolute; top: -5rem; left: -2rem; line-height: 1; pointer-events: none;
+  }
+  .testimonials-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+  .testi-header { margin-bottom: 4rem; }
+  .testi-slider { position: relative; overflow: hidden; }
+  .testi-track { display: flex; transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
+  .testi-slide {
+    min-width: 100%; padding: 0 2rem;
+  }
+  .testi-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 3vw, 1.9rem); font-weight: 300; font-style: italic;
+    color: var(--soft-black); line-height: 1.6; margin-bottom: 2rem;
+  }
+  .testi-author { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .testi-avatar {
+    width: 56px; height: 56px; border-radius: 50%; object-fit: cover;
+    border: 2px solid var(--rose); margin-bottom: 0.5rem;
+  }
+  .testi-name { font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--soft-black); }
+  .testi-title { font-size: 0.75rem; color: var(--rose); letter-spacing: 0.08em; }
+  .testi-stars { color: var(--gold); font-size: 0.8rem; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+  .testi-dots { display: flex; gap: 0.6rem; justify-content: center; margin-top: 2.5rem; }
+  .testi-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--nude-dark); cursor: none; transition: all 0.3s;
+    border: none; padding: 0;
+  }
+  .testi-dot.active { background: var(--rose); width: 24px; border-radius: 3px; }
+
+  /* ─── COUNTERS ───────────────────────────────── */
+  #counters {
+    padding: 5rem 6%;
+    background: linear-gradient(135deg, var(--rose-deep), var(--rose) 60%, var(--gold));
+  }
+  .counters-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; max-width: 1000px; margin: 0 auto; text-align: center;
+  }
+  .counter-item { padding: 1rem; }
+  .counter-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; color: white;
+    line-height: 1; display: block; margin-bottom: 0.5rem;
+  }
+  .counter-label {
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* ─── ENROLLMENT ─────────────────────────────── */
+  #enroll {
+    padding: 8rem 6%;
+    background: var(--white);
+  }
+  .enroll-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; max-width: 1100px; margin: 0 auto; align-items: center; }
+  .enroll-info p { color: var(--text-mid); line-height: 2; font-weight: 300; font-size: 0.92rem; margin-top: 1rem; }
+  .enroll-perks { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.8rem; }
+  .enroll-perk {
+    display: flex; align-items: center; gap: 1rem;
+    font-size: 0.85rem; color: var(--text-mid);
+  }
+  .enroll-perk-icon {
+    width: 36px; height: 36px; background: var(--blush-light); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem; flex-shrink: 0;
+  }
+  .enroll-form { background: var(--cream); border-radius: 20px; padding: 3rem; }
+  .form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem; font-weight: 400; color: var(--soft-black); margin-bottom: 2rem;
+  }
+  .form-group { margin-bottom: 1.3rem; }
+  .form-group label {
+    display: block; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-light); margin-bottom: 0.5rem; font-weight: 400;
+  }
+  .form-group input, .form-group select {
+    width: 100%; padding: 0.85rem 1rem;
+    border: 1.5px solid rgba(212,168,118,0.25); border-radius: 8px;
+    background: var(--white); font-family: 'Jost', sans-serif; font-size: 0.9rem;
+    color: var(--soft-black); transition: border-color 0.3s;
+    -webkit-appearance: none; appearance: none;
+  }
+  .form-group input:focus, .form-group select:focus {
+    outline: none; border-color: var(--rose);
+    box-shadow: 0 0 0 3px rgba(168,84,102,0.1);
+  }
+  .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9788a' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-submit {
+    width: 100%; padding: 1rem;
+    background: linear-gradient(135deg, var(--rose-deep), var(--rose));
+    color: white; border: none; border-radius: 8px; font-family: 'Jost', sans-serif;
+    font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase;
+    cursor: pointer; transition: all 0.4s; margin-top: 0.5rem;
+    box-shadow: 0 6px 25px rgba(168,84,102,0.3);
+  }
+  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 35px rgba(168,84,102,0.4); }
+  .form-note { font-size: 0.75rem; color: var(--text-light); text-align: center; margin-top: 0.8rem; }
+
+  /* ─── DOWNLOADS ──────────────────────────────── */
+  #downloads {
+    padding: 8rem 6%;
+    background: var(--white);
+  }
+  .downloads-inner { max-width: 900px; margin: 0 auto; }
+  .downloads-header { text-align: center; margin-bottom: 3.5rem; }
+  .download-card {
+    display: flex; align-items: center; gap: 2rem;
+    background: var(--cream); border-radius: 16px;
+    padding: 2rem 2.5rem; border: 1px solid rgba(212,168,118,0.2);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+  }
+  .download-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-rose); }
+  .download-card-icon {
+    width: 64px; height: 64px; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--rose-deep), var(--rose));
+    border-radius: 12px; display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem;
+  }
+  .download-card-info { flex: 1; }
+  .download-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 400; color: var(--soft-black); margin-bottom: 0.3rem;
+  }
+  .download-card-desc { font-size: 0.82rem; color: var(--text-light); font-weight: 300; line-height: 1.7; }
+  .download-btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: linear-gradient(135deg, var(--rose-deep), var(--rose));
+    color: white; padding: 0.75rem 1.6rem; border-radius: 50px;
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; font-family: 'Jost', sans-serif; font-weight: 400;
+    transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(168,84,102,0.3);
+    white-space: nowrap;
+  }
+  .download-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(168,84,102,0.4); }
+  @media (max-width: 600px) {
+    .download-card { flex-direction: column; text-align: center; }
+  }
+
+  /* ─── CONTACT ─────────────────────────────────── */
+  #contact {
+    padding: 8rem 6%;
+    background: linear-gradient(160deg, var(--soft-black) 0%, #3d2a2a 100%);
+  }
+  .contact-inner { max-width: 1200px; margin: 0 auto; }
+  .contact-header { text-align: center; margin-bottom: 4rem; }
+  .contact-header .section-tag { color: var(--gold); justify-content: center; }
+  .contact-header .section-title { color: var(--white); }
+  .contact-header .section-title em { color: var(--gold); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+  .contact-info { color: rgba(255,255,255,0.7); }
+  .contact-item { display: flex; gap: 1.2rem; align-items: flex-start; margin-bottom: 2rem; }
+  .contact-item-icon {
+    width: 44px; height: 44px; background: rgba(168,84,102,0.2);
+    border: 1px solid rgba(168,84,102,0.3); border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; flex-shrink: 0;
+  }
+  .contact-item-text h4 { color: white; font-size: 0.85rem; letter-spacing: 0.08em; margin-bottom: 0.3rem; font-weight: 400; }
+  .contact-item-text p, .contact-item-text a {
+    font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.7;
+    text-decoration: none; font-weight: 300; transition: color 0.3s;
+  }
+  .contact-item-text a:hover { color: var(--gold); }
+  .contact-map {
+    border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3); height: 380px;
+  }
+  .contact-map iframe { width: 100%; height: 100%; border: none; display: block; }
+  .whatsapp-contact {
+    display: inline-flex; align-items: center; gap: 0.7rem; margin-top: 1rem;
+    background: #25D366; color: white; padding: 0.75rem 1.5rem; border-radius: 8px;
+    text-decoration: none; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+    font-weight: 400; transition: all 0.3s; cursor: none;
+  }
+  .whatsapp-contact:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,211,102,0.35); }
+
+  /* ─── FOOTER ─────────────────────────────────── */
+  footer {
+    background: #1a1212; padding: 4rem 6% 2rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-top {
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 4rem; margin-bottom: 3rem; padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-brand .nav-logo { color: white; margin-bottom: 1rem; font-size: 1.8rem; }
+  .footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.35); line-height: 1.9; font-weight: 300; }
+  .footer-col h5 {
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5); margin-bottom: 1.2rem; font-weight: 400;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-col a {
+    font-size: 0.82rem; color: rgba(255,255,255,0.35); text-decoration: none;
+    transition: color 0.3s; font-weight: 300;
+  }
+  .footer-col a:hover { color: var(--rose); }
+  .footer-bottom {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.2); font-weight: 300; }
+  .footer-bottom a { color: var(--rose); text-decoration: none; }
+  .social-links { display: flex; gap: 1rem; }
+  .social-link {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-size: 0.75rem; color: rgba(255,255,255,0.4);
+    transition: all 0.3s; cursor: none;
+  }
+  .social-link:hover { border-color: var(--rose); color: var(--rose); transform: translateY(-2px); }
+
+  /* ─── WHATSAPP FLOAT ─────────────────────────── */
+  .whatsapp-float {
+    position: fixed; bottom: 2.5rem; right: 2.5rem; z-index: 998;
+    width: 60px; height: 60px; background: #25D366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+    text-decoration: none; cursor: none;
+    animation: whatsappFloat 3s ease-in-out infinite;
+    transition: transform 0.3s;
+  }
+  .whatsapp-float:hover { transform: scale(1.12); animation-play-state: paused; }
+  .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+  .whatsapp-float::before {
+    content: ''; position: absolute; inset: -4px;
+    border: 2px solid rgba(37,211,102,0.4); border-radius: 50%;
+    animation: whatsappRipple 2s ease-out infinite;
+  }
+  /* ─── PHONE FLOAT ────────────────────────────── */
+  .phone-float {
+    position: fixed; bottom: 7rem; right: 2.5rem; z-index: 998;
+    width: 60px; height: 60px; background: var(--rose-deep); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 30px rgba(224,0,110,0.4);
+    text-decoration: none; cursor: none;
+    transition: transform 0.3s;
+  }
+  .phone-float:hover { transform: scale(1.12); }
+  .phone-float svg { width: 26px; height: 26px; fill: white; }
+  @keyframes whatsappFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+  @keyframes whatsappRipple { 0%{transform:scale(1);opacity:0.6} 100%{transform:scale(1.5);opacity:0} }
+
+  /* ─── GLASSMORPHISM ACCENTS ──────────────────── */
+  .glass-card {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 16px;
+  }
+  .floating-orb {
+    position: absolute; border-radius: 50%; pointer-events: none; z-index: 0;
+    filter: blur(40px); opacity: 0.4;
+  }
+
+  /* ─── RESPONSIVE ─────────────────────────────── */
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-img-wrap { max-height: 450px; }
+    .about-img-accent { display: none; }
+    .about-badge { left: 0; top: 1rem; }
+    .enroll-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .counters-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .footer-brand { grid-column: span 2; }
+    .grad-grid { columns: 3; }
+    .slideshow-slide img { height: 400px; }
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    /* Fix cursor on mobile */
+    body { cursor: auto !important; }
+    .cursor, .cursor-follower { display: none !important; }
+    a, button { cursor: pointer !important; }
+
+    /* Nav */
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-logo { font-size: 1.2rem; }
+    .nav-logo span { font-size: 0.55rem; }
+
+    /* Hero */
+    #hero { height: 100svh; }
+    .hero-title { font-size: clamp(2.6rem, 10vw, 4.5rem) !important; line-height: 1.12; }
+    .hero-sub { font-size: 0.88rem; padding: 0 1rem; }
+    .hero-eyebrow { font-size: 0.62rem; letter-spacing: 0.2em; }
+    .hero-btns { flex-direction: column; align-items: center; gap: 0.8rem; }
+    .hero-btns a { width: 80%; text-align: center; }
+    .hero-slide-dots { bottom: 3.5rem; }
+
+    /* Sections padding */
+    #about, #courses, #gallery, #testimonials, #enroll, #contact,
+    #at-beniels, #class2025, #counters, #services, #downloads { padding: 4rem 5% !important; }
+
+    /* About */
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .section-title { font-size: clamp(1.8rem, 7vw, 2.8rem) !important; }
+
+    /* Courses */
+    .courses-grid { grid-template-columns: 1fr; }
+
+    /* Services */
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Gallery */
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item:nth-child(1) { grid-column: span 2; }
+    .gallery-item:nth-child(6) { grid-column: span 2; }
+
+    /* Graduation grid */
+    .grad-grid { columns: 2; column-gap: 0.5rem; }
+    .grad-item { margin-bottom: 0.5rem; }
+
+    /* Slideshow */
+    .slideshow-slide img { height: 260px; }
+    .slideshow-btn { width: 36px; height: 36px; font-size: 0.9rem; }
+
+    /* Counters */
+    .counters-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+    /* Testimonials */
+    .testi-quote { font-size: clamp(1.1rem, 4vw, 1.5rem) !important; }
+
+    /* Enroll form */
+    .form-row { grid-template-columns: 1fr; }
+    .enroll-form { padding: 2rem 1.2rem; }
+    .enroll-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+    /* Contact */
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .contact-map { height: 260px; }
+
+    /* Footer */
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-brand { grid-column: auto; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
+    /* Float buttons */
+    .whatsapp-float { bottom: 1.2rem; right: 1.2rem; width: 52px; height: 52px; }
+    .whatsapp-float svg { width: 24px; height: 24px; }
+    .phone-float { bottom: 5rem; right: 1.2rem; width: 52px; height: 52px; }
+    .phone-float svg { width: 22px; height: 22px; }
+
+    /* Instructor label */
+    .about-img-wrap > div > div:first-child { font-size: 0.65rem; letter-spacing: 0.12em; }
+  }
+
+  /* Small phones */
+  @media (max-width: 480px) {
+    .hero-title { font-size: clamp(2.2rem, 9vw, 3rem) !important; }
+    .hero-eyebrow { display: none; }
+    .hero-sub { font-size: 0.82rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .grad-grid { columns: 2; }
+    .slideshow-slide img { height: 220px; }
+    .about-stats { grid-template-columns: repeat(3,1fr); gap: 0.6rem; }
+    .stat-num { font-size: 1.8rem !important; }
+    .stat-label { font-size: 0.58rem; }
+    .form-submit { font-size: 0.75rem; letter-spacing: 0.08em; }
+    .nav-logo img { height: 40px; }
+    #class2025::before { font-size: 8rem; }
+    /* About badge overflow fix on small screens */
+    .about-badge { position: static; display: inline-flex; flex-direction: column; align-items: center; margin-bottom: 1rem; }
+    /* Download card fix */
+    .download-card { gap: 1rem; padding: 1.5rem 1rem; }
+    .download-card-icon { width: 48px; height: 48px; font-size: 1.4rem; }
+    /* Nav logo text truncation prevention */
+    .nav-logo { font-size: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-monogram">BBTC</div>
+  <div class="loader-line" id="loaderLine"></div>
+</div>
+
+<!-- FLOATING PETALS -->
+<div id="petalsContainer"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Beniel's<span>Beauty Training College & Salon</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#downloads">Downloads</a></li>
+    <li><a href="#testimonials">Stories</a></li>
+    <li><a href="#enroll" class="nav-cta">Enroll Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#courses" class="mobile-link">Courses</a>
+  <a href="#services" class="mobile-link">Services</a>
+  <a href="#gallery" class="mobile-link">Gallery</a>
+  <a href="#downloads" class="mobile-link">Downloads</a>
+  <a href="#testimonials" class="mobile-link">Stories</a>
+  <a href="#enroll" class="mobile-link">Enroll Now</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg">
+    <div class="hero-slide active" style="background-image:url('https://ik.imagekit.io/lrj2sofys/beniels%20class/beniels%20dash/IMG-20260325-WA0039.jpg?updatedAt=1774815461035&tr=w-1400,q-75,f-webp')"></div>
+    <div class="hero-slide" style="background-image:url('https://ik.imagekit.io/lrj2sofys/beniels%20class/beniels%20dash/IMG-20260325-WA0031.jpg?updatedAt=1774815461030&tr=w-1400,q-75,f-webp')"></div>
+    <div class="hero-slide" style="background-image:url('https://ik.imagekit.io/lrj2sofys/beniels%20class/beniels%20dash/0Y2A4514.jpg?updatedAt=1774815480853&tr=w-1400,q-75,f-webp')"></div>
+    <div class="hero-slide" style="background-image:url('https://ik.imagekit.io/lrj2sofys/beniels%20class/beniels%20dash/0Y2A4423.jpg?updatedAt=1774815482550&tr=w-1400,q-75,f-webp')"></div>
+    <div class="hero-slide" style="background-image:url('https://ik.imagekit.io/lrj2sofys/beniels%20class/beniels%20dash/0Y2A4451.jpg?updatedAt=1774815484768&tr=w-1400,q-75,f-webp')"></div>
+    <div class="hero-slide" style="background-image:url('https://ik.imagekit.io/lrj2sofys/beniels%20class/beniels%20dash/IMG-20260325-WA0010.jpg?updatedAt=1774815457475&tr=w-1400,q-75,f-webp')"></div>
+    <div class="hero-slide" style="background-image:url('https://ik.imagekit.io/lrj2sofys/beniels%20class/beniels%20dash/IMG-20260325-WA0033.jpg?updatedAt=1774815458962&tr=w-1400,q-75,f-webp')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Kisumu's Premier Beauty Institution</div>
+    <h1 class="hero-title">Beniel's <em>Beauty</em><br><strong style="font-weight:600;font-size:1.15em;letter-spacing:0.02em;">Training College & Salon</strong></h1>
+    <p class="hero-sub">Where artistry meets excellence — transform your passion into a thriving career at Beniel's Beauty Training College.</p>
+    <div class="hero-btns">
+      <a href="#enroll" class="btn-primary"><span>Enroll Now</span></a>
+      <a href="#services" class="btn-outline">Book a Service</a>
+    </div>
+  </div>
+  <div class="hero-slide-dots" id="heroSlideDots">
+    <button class="hero-slide-dot active" data-index="0"></button>
+    <button class="hero-slide-dot" data-index="1"></button>
+    <button class="hero-slide-dot" data-index="2"></button>
+    <button class="hero-slide-dot" data-index="3"></button>
+    <button class="hero-slide-dot" data-index="4"></button>
+    <button class="hero-slide-dot" data-index="5"></button>
+    <button class="hero-slide-dot" data-index="6"></button>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="floating-orb" style="width:400px;height:400px;background:var(--blush);top:-100px;right:-100px;"></div>
+  <div class="about-grid">
+    <div class="about-img-wrap" data-aos="fade-right" data-aos-duration="1000">
+      <div style="position:relative;">
+        <div style="background:linear-gradient(135deg,var(--rose-deep),var(--rose));color:white;text-align:center;padding:0.6rem 1rem;border-radius:8px 8px 0 0;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:500;">
+          ✦ College Director ✦
+        </div>
+        <img class="about-img-main" src="https://ik.imagekit.io/lrj2sofys/Beryl%20beniels/instructor.webp?updatedAt=1774789011858&tr=w-700,q-80" alt="College Director at Beniel's Beauty Training College" loading="eager" style="border-radius:0 0 4px 4px;">
+      </div>
+      <img class="about-img-accent" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&q=80" alt="Beauty training session">
+    </div>
+    <div class="about-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+      <div class="section-tag">Our Story</div>
+      <h2 class="section-title">Born from a <em>Passion</em><br>for Beauty</h2>
+      <div class="divider"></div>
+      <p>Beniel's Beauty Training College & Salon was founded with a singular vision: to create a world-class beauty education experience right in the heart of Kisumu, Kenya. We believe that every woman deserves the opportunity to transform her passion into a sustainable, fulfilling career.</p>
+      <p>Located in Carwash, Kisumu, our institution has become the leading destination for aspiring beauty professionals across Western Kenya. Our industry-certified instructors bring real-world salon experience directly to the classroom.</p>
+      <p>From the moment you walk through our doors, you'll feel the difference — a warm, empowering environment designed to help you grow, create, and thrive.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+  <div class="courses-header" data-aos="fade-up">
+    <div class="section-tag" style="justify-content:center">What We Offer</div>
+    <h2 class="section-title">Our <em>Signature</em> Courses</h2>
+    <div class="divider" style="margin:1.5rem auto"></div>
+    <p style="color:var(--text-mid);font-weight:300;max-width:500px;margin:0 auto;line-height:1.9;font-size:0.92rem">Hands-on, industry-aligned training programs designed to launch your career in beauty and wellness.</p>
+  </div>
+  <div class="courses-grid">
+    <div class="course-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="course-card-img">
+        <img src="https://ik.imagekit.io/lrj2sofys/beniels%20final%20changes/IMG-20260331-WA0003%20(1).jpg?tr=w-600,h-440,q-80,f-webp,fo-auto" alt="Cosmetology" loading="lazy">
+        <div class="course-card-img-overlay"></div>
+      </div>
+      <div class="course-card-body">
+        <span class="course-icon">💄</span>
+        <div class="course-tag">12 Months</div>
+        <h3 class="course-card-title">Cosmetology</h3>
+        <p>A comprehensive program covering all aspects of beauty — skincare, makeup, hair, and nail care. Graduate as a fully-certified cosmetologist.</p>
+        <a href="#enroll" class="course-link">Enroll Now →</a>
+      </div>
+    </div>
+    <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="course-card-img">
+        <img src="https://ik.imagekit.io/lrj2sofys/beniels%20final%20changes/IMG-20260331-WA0000.jpg?updatedAt=1775029773707&tr=w-600,h-440,q-80,f-webp,fo-auto" alt="Hairdressing" loading="lazy">
+        <div class="course-card-img-overlay"></div>
+      </div>
+      <div class="course-card-body">
+        <span class="course-icon">✂️</span>
+        <div class="course-tag">9 Months</div>
+        <h3 class="course-card-title">Hair Dressing</h3>
+        <p>Master cutting, colouring, styling, and treatment techniques. Learn braiding, relaxing, natural styles and modern hair artistry.</p>
+        <a href="#enroll" class="course-link">Enroll Now →</a>
+      </div>
+    </div>
+    <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="course-card-img">
+        <img src="https://ik.imagekit.io/lrj2sofys/beniels%20makeup/chidy-young-f8TE7gwRlb8-unsplash.jpg?updatedAt=1774900108842&tr=w-600,h-440,q-80,f-webp,fo-auto" alt="Makeup Artistry" loading="lazy">
+        <div class="course-card-img-overlay"></div>
+      </div>
+      <div class="course-card-body">
+        <span class="course-icon">🎨</span>
+        <div class="course-tag">6 Months</div>
+        <h3 class="course-card-title">Makeup Artistry</h3>
+        <p>From bridal to editorial — learn professional makeup techniques, colour theory, contouring, and special effects for every occasion.</p>
+        <a href="#enroll" class="course-link">Enroll Now →</a>
+      </div>
+    </div>
+    <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="course-card-img">
+        <img src="https://ik.imagekit.io/lrj2sofys/beniels%20gallery/IMG-20260330-WA0019.jpg?updatedAt=1774887714432&tr=w-600,h-440,q-80,f-webp,fo-auto" alt="Nail Technology" loading="lazy">
+        <div class="course-card-img-overlay"></div>
+      </div>
+      <div class="course-card-body">
+        <span class="course-icon">💅</span>
+        <div class="course-tag">3 Months</div>
+        <h3 class="course-card-title">Nail Technology</h3>
+        <p>Gel, acrylic, nail art, and natural nail care — become a certified nail technician with creative edge and technical precision.</p>
+        <a href="#enroll" class="course-link">Enroll Now →</a>
+      </div>
+    </div>
+    <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="course-card-img">
+        <img src="https://ik.imagekit.io/lrj2sofys/beniels%20makeup/beniels%20beauty%20therapy/iwaria-inc-Bv826LRAgIc-unsplash.jpg?tr=w-600,h-440,q-80,f-webp,fo-auto" alt="Beauty Therapy" loading="lazy">
+        <div class="course-card-img-overlay"></div>
+      </div>
+      <div class="course-card-body">
+        <span class="course-icon">🌸</span>
+        <div class="course-tag">6 Months</div>
+        <h3 class="course-card-title">Beauty Therapy</h3>
+        <p>Holistic beauty and wellness training including facials, body treatments, waxing, massage, and aromatherapy for spa environments.</p>
+        <a href="#enroll" class="course-link">Enroll Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SALON SERVICES -->
+<section id="services">
+  <div class="services-inner">
+    <div class="services-header" data-aos="fade-right">
+      <div class="section-tag">Visit Our Salon</div>
+      <h2 class="section-title">Salon <em>Services</em></h2>
+      <p>Experience luxury beauty treatments in our fully-equipped salon. Our trained professionals deliver world-class results.</p>
+    </div>
+    <div class="services-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="service-item">
+        <span class="service-emoji">💆‍♀️</span>
+        <div class="service-name">Hair Treatments</div>
+        <div class="service-desc">Deep conditioning, protein treatments, scalp therapy and repair masks.</div>
+        <span class="service-price">From KES 800</span>
+      </div>
+      <div class="service-item">
+        <span class="service-emoji">✂️</span>
+        <div class="service-name">Cut & Style</div>
+        <div class="service-desc">Expert cuts, blowouts, braiding and all modern styling techniques.</div>
+        <span class="service-price">From KES 500</span>
+      </div>
+      <div class="service-item">
+        <span class="service-emoji">💄</span>
+        <div class="service-name">Makeup</div>
+        <div class="service-desc">Bridal, event, and everyday professional makeup application.</div>
+        <span class="service-price">From KES 1,500</span>
+      </div>
+      <div class="service-item">
+        <span class="service-emoji">💅</span>
+        <div class="service-name">Nail Art</div>
+        <div class="service-desc">Gel nails, acrylics, nail art designs and classic manicures.</div>
+        <span class="service-price">From KES 400</span>
+      </div>
+      <div class="service-item">
+        <span class="service-emoji">🌿</span>
+        <div class="service-name">Facials & Skin</div>
+        <div class="service-desc">Cleansing, exfoliation, hydrating facials and skin brightening treatments.</div>
+        <span class="service-price">From KES 1,200</span>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem" data-aos="fade-up" data-aos-delay="400">
+      <a href="https://wa.me/254701771595?text=Hello%2C%20I%20would%20like%20to%20book%20a%20salon%20service%20at%20Beniel's%20Beauty%20Salon." target="_blank" class="btn-primary" style="display:inline-block"><span>📅 Book via WhatsApp</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-header" data-aos="fade-up">
+    <div class="section-tag" style="justify-content:center">Our Work</div>
+    <h2 class="section-title">Beauty in <em>Every Detail</em></h2>
+    <div class="divider" style="margin:1.5rem auto"></div>
+    <p style="color:var(--text-light);font-weight:300;font-size:0.88rem;line-height:1.9">A glimpse into the transformations and artistry born at Beniel's.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item" data-aos="fade-up">
+      <img src="https://ik.imagekit.io/lrj2sofys/beniels%20final%20changes/IMG-20260331-WA0001.jpg?updatedAt=1775029774086&tr=w-800,h-800,q-80,f-webp,fo-auto" alt="Bridal makeup" loading="lazy">
+      <div class="gallery-item-overlay"><span>Bridal Makeup</span></div>
+    </div>
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://ik.imagekit.io/lrj2sofys/beniels%20nails/iwaria-inc-DzMmp0uewcg-unsplash.jpg?updatedAt=1774900302182&tr=w-600,q-80,f-webp,fo-auto" alt="Nail art" loading="lazy">
+      <div class="gallery-item-overlay"><span>Nail Art</span></div>
+    </div>
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+      <img src="https://ik.imagekit.io/lrj2sofys/beniels%20facial/iwaria-inc-TLLro7iVLtk-unsplash.jpg?updatedAt=1774944441382&tr=w-600,q-80,f-webp,fo-auto" alt="Facial treatment" loading="lazy">
+      <div class="gallery-item-overlay"><span>Facial</span></div>
+    </div>
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="150">
+      <img src="https://ik.imagekit.io/lrj2sofys/IMG-20260331-WA0002%20(1).jpg?tr=w-600,q-80,f-webp,fo-auto" alt="Hair styling" loading="lazy">
+      <div class="gallery-item-overlay"><span>Hair Styling</span></div>
+    </div>
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="250">
+      <img src="https://ik.imagekit.io/lrj2sofys/beniels%20makeup/chidy-young-f8TE7gwRlb8-unsplash.jpg?updatedAt=1774900108842&tr=w-600,q-80,f-webp,fo-auto" alt="Makeup artistry" loading="lazy">
+      <div class="gallery-item-overlay"><span>Artistry</span></div>
+    </div>
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+      <img src="https://ik.imagekit.io/lrj2sofys/beniels%20gallery/IMG-20260330-WA0018.jpg?updatedAt=1774887715568&tr=w-800,q-80,f-webp,fo-auto" alt="Beauty training" loading="lazy">
+      <div class="gallery-item-overlay"><span>Training Session</span></div>
+    </div>
+  </div>
+  <div class="gallery-footer" data-aos="fade-up" data-aos-delay="300">
+    <p>Follow our journey on Instagram <a href="https://www.instagram.com/beniels_beauty_trainingcollege?igsh=MXBsYTU2bXU5a2Z2MQ==" target="_blank">@beniels_beauty_trainingcollege</a> · Share your transformation with <strong>#BenielsBeautyTrainingCollege</strong></p>
+  </div>
+</section>
+
+<!-- DOWNLOADS -->
+<section id="downloads">
+  <div class="downloads-inner">
+    <div class="downloads-header" data-aos="fade-up">
+      <div class="section-tag" style="justify-content:center">Resources</div>
+      <h2 class="section-title">Downloads & <em>Prospectus</em></h2>
+      <div class="divider" style="margin:1.5rem auto"></div>
+      <p style="color:var(--text-light);font-weight:300;font-size:0.88rem;line-height:1.9">Download our course prospectus to explore programmes, fee structures, and everything you need to know before enrolling.</p>
+    </div>
+    <div class="download-card" data-aos="fade-up" data-aos-delay="150">
+      <div class="download-card-icon">📄</div>
+      <div class="download-card-info">
+        <div class="download-card-title">Beniel's 2026 Prospectus & Fee Structure</div>
+        <div class="download-card-desc">Full details on all courses offered, duration, fees, accreditation, and admission requirements for the 2026 intake.</div>
+      </div>
+      <a href="https://ik.imagekit.io/lrj2sofys/beniels%20facial/BRONCHURE%20BENIEL'S%202026%20PDF.pdf" target="_blank" download class="download-btn">
+        ⬇ Download PDF
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CLASS OF 2025 -->
+<section id="class2025">
+  <div class="class2025-inner">
+    <div class="class2025-header" data-aos="fade-up">
+      <div class="section-tag">Graduation</div>
+      <h2 class="section-title">Class of <em>2025</em></h2>
+      <div class="divider" style="margin:1.5rem auto"></div>
+      <p>Celebrating the brilliant graduates who completed their beauty training journey at Beniel's. We are proud of every one of you. 🎓</p>
+    </div>
+    <div class="grad-slideshow-wrap" data-aos="fade-up" data-aos-delay="200">
+      <div class="grad-slideshow-track" id="gradTrack">
+        <div class="grad-slideshow-slide"><img loading="lazy" src="https://ik.imagekit.io/lrj2sofys/GRAD%20BENEILS%202025/QJ9C7291.jpg?updatedAt=1774944630961&tr=w-900,h-560,q-80,f-webp,fo-auto" alt="Class of 2025"><div class="grad-slideshow-slide-label">Class of 2025 · Beniel's Beauty College</div></div>
+      </div>
+      <button class="slideshow-btn prev" id="gradPrev">&#8592;</button>
+      <button class="slideshow-btn next" id="gradNext">&#8594;</button>
+    </div>
+    <div class="grad-slideshow-dots" id="gradDots">
+      <button class="grad-slideshow-dot active" data-index="0"></button>
+    </div>
+  </div>
+</section>
+
+<!-- AT BENIELS SLIDESHOW -->
+<section id="at-beniels">
+  <div class="at-beniels-inner">
+    <div class="at-beniels-header" data-aos="fade-up">
+      <div class="section-tag">Life at Beniel's</div>
+      <h2 class="section-title"><em>At</em> Beniel's</h2>
+      <div class="divider" style="margin:1.5rem auto"></div>
+      <p style="color:rgba(255,255,255,0.5);font-weight:300;font-size:0.88rem;line-height:1.9">Behind the scenes at Kisumu's premier beauty college.</p>
+    </div>
+    <div class="slideshow-wrap" data-aos="fade-up" data-aos-delay="200">
+      <div class="slideshow-track" id="benielsTrack">
+        <div class="slideshow-slide">
+          <img loading="lazy" src="https://ik.imagekit.io/lrj2sofys/beniels%20class/IMG-20260325-WA0004.jpg?updatedAt=1774788247737&tr=w-900,h-520,q-80,f-webp,fo-auto" alt="At Beniel's">
+          <div class="slideshow-slide-label">At Beniel's Beauty College</div>
+        </div>
+        <div class="slideshow-slide">
+          <img loading="lazy" src="https://ik.imagekit.io/lrj2sofys/beniels%20class/IMG-20260325-WA0028.jpg?updatedAt=1774788243400&tr=w-900,h-520,q-80,f-webp,fo-auto" alt="At Beniel's">
+          <div class="slideshow-slide-label">At Beniel's Beauty College</div>
+        </div>
+        <div class="slideshow-slide">
+          <img loading="lazy" src="https://ik.imagekit.io/lrj2sofys/beniels%20class/IMG-20260325-WA0008.jpg?updatedAt=1774788245968&tr=w-900,h-520,q-80,f-webp,fo-auto" alt="At Beniel's">
+          <div class="slideshow-slide-label">At Beniel's Beauty College</div>
+        </div>
+        <div class="slideshow-slide">
+          <img loading="lazy" src="https://ik.imagekit.io/lrj2sofys/beniels%20class/IMG-20260325-WA0005.jpg?updatedAt=1774788245864&tr=w-900,h-520,q-80,f-webp,fo-auto" alt="At Beniel's">
+          <div class="slideshow-slide-label">At Beniel's Beauty College</div>
+        </div>
+        <div class="slideshow-slide">
+          <img loading="lazy" src="https://ik.imagekit.io/lrj2sofys/beniels%20class/IMG-20260325-WA0043.jpg?updatedAt=1774788246948&tr=w-900,h-520,q-80,f-webp,fo-auto" alt="At Beniel's">
+          <div class="slideshow-slide-label">At Beniel's Beauty College</div>
+        </div>
+        <div class="slideshow-slide">
+          <img loading="lazy" src="https://ik.imagekit.io/lrj2sofys/beniels%20class/IMG-20260325-WA0040.jpg?updatedAt=1774788247755&tr=w-900,h-520,q-80,f-webp,fo-auto" alt="At Beniel's">
+          <div class="slideshow-slide-label">At Beniel's Beauty College</div>
+        </div>
+        <div class="slideshow-slide">
+          <img loading="lazy" src="https://ik.imagekit.io/lrj2sofys/beniels%20class/IMG-20260325-WA0033.jpg?updatedAt=1774788241956&tr=w-900,h-520,q-80,f-webp,fo-auto" alt="At Beniel's">
+          <div class="slideshow-slide-label">At Beniel's Beauty College</div>
+        </div>
+      </div>
+      <button class="slideshow-btn prev" id="benielsPrev">&#8592;</button>
+      <button class="slideshow-btn next" id="benielsNext">&#8594;</button>
+    </div>
+    <div class="slideshow-dots" id="benielsDots">
+      <button class="slideshow-dot active" data-index="0"></button>
+      <button class="slideshow-dot" data-index="1"></button>
+      <button class="slideshow-dot" data-index="2"></button>
+      <button class="slideshow-dot" data-index="3"></button>
+      <button class="slideshow-dot" data-index="4"></button>
+      <button class="slideshow-dot" data-index="5"></button>
+      <button class="slideshow-dot" data-index="6"></button>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="testimonials-inner">
+    <div class="testi-header" data-aos="fade-up">
+      <div class="section-tag" style="justify-content:center">Success Stories</div>
+      <h2 class="section-title">Words from Our <em>Graduates</em></h2>
+      <div class="divider" style="margin:1.5rem auto"></div>
+    </div>
+    <div class="testi-slider" data-aos="fade-up" data-aos-delay="200">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-slide">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"The hairdressing program at Beniel's transformed me completely. I came in not knowing how to hold a pair of scissors, and I left with the confidence and skills to style any hair type. The hands-on training is unmatched — I now run my own salon in Kisumu!"</p>
+          <div class="testi-author">
+            <img class="testi-avatar" src="https://ik.imagekit.io/lrj2sofys/beniels%20class/beniels%20testimonials/IMG-20260329-WA0002(1).jpg?tr=w-112,h-112,q-80,f-webp,fo-face" alt="Saumu Kihima" loading="lazy">
+            <span class="testi-name">Saumu Kihima</span>
+            <span class="testi-title">Hair Dressing Graduate · Salon Owner</span>
+          </div>
+        </div>
+        <div class="testi-slide">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Beniel's gave me more than just hairdressing skills — they gave me a career. The instructors are patient, knowledgeable and truly invested in your success. Within months of graduating I was already fully booked with clients. Best decision I ever made!"</p>
+          <div class="testi-author">
+            <img class="testi-avatar" src="https://ik.imagekit.io/lrj2sofys/beniels%20class/beniels%20testimonials/IMG-20260329-WA0003(1).jpg?tr=w-112,h-112,q-80,f-webp,fo-face" alt="Jacinta Atieno" loading="lazy">
+            <span class="testi-name">Jacinta Atieno</span>
+            <span class="testi-title">Hair Dressing Graduate · Professional Stylist</span>
+          </div>
+        </div>
+        <div class="testi-slide">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"The Cosmetology course at Beniel's is incredibly comprehensive. From skincare to makeup to nails — I gained expertise in everything. The TVETA and NITA accreditation meant my certificate was immediately recognised when I started job hunting. I couldn't be prouder of where I am today!"</p>
+          <div class="testi-author">
+            <img class="testi-avatar" src="https://ik.imagekit.io/lrj2sofys/beniels%20class/beniels%20testimonials/IMG-20260329-WA0005(1).jpg?tr=w-112,h-112,q-80,f-webp,fo-face" alt="Lucy Angiro" loading="lazy">
+            <span class="testi-name">Lucy Angiro</span>
+            <span class="testi-title">Cosmetology Graduate · Beauty Professional</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-dots" id="testiDots">
+        <button class="testi-dot active" data-index="0"></button>
+        <button class="testi-dot" data-index="1"></button>
+        <button class="testi-dot" data-index="2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENROLLMENT -->
+<section id="enroll">
+  <div class="enroll-grid">
+    <div class="enroll-info" data-aos="fade-right">
+      <div class="section-tag">Start Your Journey</div>
+      <h2 class="section-title">Enroll <em>Today</em></h2>
+      <div class="divider"></div>
+      <p>Take the first step toward your dream career in beauty. Our admissions team will reach out within 24 hours to guide you through the enrollment process.</p>
+      <div class="enroll-perks">
+        <div style="margin-bottom:1.5rem;">
+          <p style="color:var(--text-mid);font-size:0.9rem;line-height:1.8;font-weight:400;">Beniel's Beauty College is accredited by Kenya Governmental bodies including the Technical and Vocational Education and Training Authority (TVETA), and National Industrial Training Authority (NITA).</p>
+          <div style="display:flex;gap:1.5rem;align-items:center;margin-top:1rem;flex-wrap:wrap;">
+            <img src="https://ik.imagekit.io/lrj2sofys/nita-approved.jpg?updatedAt=1774810473806&tr=w-300,q-80,f-webp" alt="TVETA and NITA Accreditation Logos" loading="lazy" style="max-width:100%;height:auto;max-height:90px;object-fit:contain;border-radius:8px;background:white;padding:8px;box-shadow:0 2px 16px rgba(0,0,0,0.12);">
+          </div>
+        </div>
+        <div class="enroll-perk"><div class="enroll-perk-icon">🤝</div><span>Job placement assistance and salon partnerships</span></div>
+        <div class="enroll-perk"><div class="enroll-perk-icon">💳</div><span>Flexible payment plans available for all courses</span></div>
+        <div class="enroll-perk"><div class="enroll-perk-icon">🧴</div><span>Full kit of professional beauty tools included</span></div>
+      </div>
+    </div>
+    <div class="enroll-form glass-card" data-aos="fade-left" data-aos-delay="200">
+      <div class="form-title">Your Beauty Journey Starts Here</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" id="firstName" placeholder="e.g. Amira">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" id="lastName" placeholder="e.g. Odhiambo">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Phone Number (WhatsApp)</label>
+        <input type="tel" id="phone" placeholder="e.g. 0712 345 678">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label>Course of Interest</label>
+        <select id="course">
+          <option value="">Select a course</option>
+          <option>Cosmetology (12 months)</option>
+          <option>Hair Dressing (9 months)</option>
+          <option>Makeup Artistry (6 months)</option>
+          <option>Nail Technology (3 months)</option>
+          <option>Beauty Therapy (6 months)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Preferred Start Date</label>
+        <select id="startDate">
+          <option value="">Choose intake</option>
+          <option>January 2026 Intake</option>
+          <option>April 2026 Intake</option>
+          <option>July 2026 Intake</option>
+          <option>October 2026 Intake</option>
+        </select>
+      </div>
+      <button class="form-submit" onclick="sendToWhatsApp()">Send Enrollment via WhatsApp 💬</button>
+      <p class="form-note">Your details are sent securely via WhatsApp. We'll respond within 24 hours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-header" data-aos="fade-up">
+      <div class="section-tag">Find Us</div>
+      <h2 class="section-title">Get in <em>Touch</em></h2>
+      <div class="divider" style="margin:1.5rem auto"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info" data-aos="fade-right">
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <h4>Location</h4>
+            <p>Carwash Stage, Kibos Road<br>Opposite Crimsons Arcade, Kisumu<br>P.O BOX 6217-40100, Kisumu, Kenya</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text">
+            <h4>Phone & WhatsApp</h4>
+            <a href="tel:+254701771595">+254 701 771 595</a><br>
+            <a href="tel:+254764488538">+254 764 488 538</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-text">
+            <h4>Email</h4>
+            <a href="mailto:berylbaraka230@gmail.com">berylbaraka230@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🕐</div>
+          <div class="contact-item-text">
+            <h4>Working Hours</h4>
+            <p>Mon – Sat: 8:00am – 6:00pm<br>Sunday: 10:00am – 3:00pm</p>
+          </div>
+        </div>
+        <a href="https://wa.me/254701771595?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Beniel's%20Beauty%20Training%20College." target="_blank" class="whatsapp-contact">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <div class="contact-map" data-aos="fade-left" data-aos-delay="200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3989.6!2d34.7823!3d-0.0822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMCcyOS42Ilggb3IgMzTCsDQ2JzU2LjMiRQ!5e0!3m2!1sen!2ske!4v1700000001" allowfullscreen="" loading="lazy" title="Beniel's Beauty College - Carwash Stage, Kibos Road, Kisumu"></iframe>
+        <a href="https://maps.app.goo.gl/c88xnUyDzapDqGE8A" target="_blank" style="display:block;text-align:center;margin-top:0.8rem;font-size:0.8rem;color:var(--gold);text-decoration:none;letter-spacing:0.08em;">📍 Open in Google Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">Beniel's<span>Beauty Training College & Salon</span></a>
+        <p>Empowering women to build beautiful, thriving careers in beauty and wellness since 2018. Kisumu's premier beauty institution.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#services">Salon Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#downloads">Downloads</a></li>
+          <li><a href="#enroll">Enroll Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow Us</h5>
+        <ul>
+          <li><a href="https://www.instagram.com/beniels_beauty_trainingcollege?igsh=MXBsYTU2bXU5a2Z2MQ==" target="_blank">📸 Instagram</a></li>
+          <li><a href="https://www.facebook.com/share/1Gk5QxMJtz/" target="_blank">👍 Facebook</a></li>
+          <li><a href="https://vm.tiktok.com/ZS9RvhJxJQPKA-Axmcd/" target="_blank">🎵 TikTok</a></li>
+          <li><a href="https://wa.me/254701771595" target="_blank">💬 WhatsApp</a></li>
+          <li><a href="mailto:berylbaraka230@gmail.com">✉️ berylbaraka230@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Beniel's Beauty Training College & Salon, Kisumu. All rights reserved.</p>
+      <p style="font-size:0.72rem;color:rgba(255,255,255,0.25);font-weight:300;">Website developed by <a href="https://code-top-premium-digital-agency.vercel.app/?fbclid=IwVERDUAQ5svtleHRuA2FlbQIxMABzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR7u36y-R0eZ6Kyl2kEKIw1A6OHWdH0oXCB4hgB9939K9yObk26HhCvke-uSPA_aem_d4Elnq0gQjdTO8Ha9r--Nw" target="_blank" style="color:var(--rose);text-decoration:none;font-weight:400;">CodeTop Digital</a></p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/beniels_beauty_trainingcollege?igsh=MXBsYTU2bXU5a2Z2MQ==" target="_blank" class="social-link" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/share/1Gk5QxMJtz/" target="_blank" class="social-link" aria-label="Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://vm.tiktok.com/ZS9RvhJxJQPKA-Axmcd/" target="_blank" class="social-link" aria-label="TikTok" title="TikTok">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </a>
+        <a href="https://wa.me/254701771595" target="_blank" class="social-link" aria-label="WhatsApp" title="WhatsApp">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp-float" href="https://wa.me/254701771595?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Beniel's%20Beauty%20Training%20College%20in%20Kisumu." target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- PHONE FLOAT -->
+<a class="phone-float" href="tel:+254701771595" aria-label="Call us">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+</a>
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+// ─── AOS INIT ──────────────────────────────────
+try {
+  AOS.init({ duration: 900, easing: 'cubic-bezier(0.23, 1, 0.32, 1)', once: true, offset: 80 });
+  // Remove the fallback style since AOS loaded
+  const aosFallback = document.getElementById('aosFallback');
+  if (aosFallback) aosFallback.textContent = '';
+} catch(e) {
+  // AOS failed - apply fallback to show all elements
+  const aosFallback = document.getElementById('aosFallback');
+  if (aosFallback) aosFallback.textContent = '[data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }';
+}
+
+// ─── LOADER ────────────────────────────────────
+function hideLoader() {
+  const loader = document.getElementById('loader');
+  if (loader) { loader.style.opacity = '0'; loader.style.visibility = 'hidden'; setTimeout(() => { loader.style.display = 'none'; }, 500); }
+}
+// Hide fast — 500ms is enough to show the brand mark
+setTimeout(hideLoader, 500);
+// Also hide immediately if page fully loaded before timeout
+if (document.readyState === 'complete') { hideLoader(); }
+
+// ─── CUSTOM CURSOR ─────────────────────────────
+try {
+  const cursor = document.getElementById('cursor');
+  const follower = document.getElementById('cursorFollower');
+  if (cursor && follower && window.matchMedia('(pointer:fine)').matches) {
+    let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
+    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; cursor.style.left = mouseX + 'px'; cursor.style.top = mouseY + 'px'; });
+    function animateFollower() {
+      followerX += (mouseX - followerX) * 0.12;
+      followerY += (mouseY - followerY) * 0.12;
+      follower.style.left = followerX + 'px'; follower.style.top = followerY + 'px';
+      requestAnimationFrame(animateFollower);
+    }
+    animateFollower();
+    document.querySelectorAll('a,button,.course-card,.gallery-item,.service-item').forEach(el => {
+      el.addEventListener('mouseenter', () => { cursor.classList.add('hovered'); follower.classList.add('hovered'); });
+      el.addEventListener('mouseleave', () => { cursor.classList.remove('hovered'); follower.classList.remove('hovered'); });
+    });
+  }
+} catch(e) {}
+
+// ─── NAVBAR SCROLL ─────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ─── MOBILE MENU ───────────────────────────────
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+});
+
+// ─── HERO SLIDESHOW ────────────────────────────
+try { (function() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('#heroSlideDots .hero-slide-dot');
+  const total = slides.length;
+  let current = 0;
+  let timer;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    slides[current].classList.add('prev');
+    setTimeout(() => slides[current < total ? current : 0].classList.remove('prev'), 1500);
+    current = (index + total) % total;
+    slides[current].classList.add('active');
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    // reset prev class after transition
+    slides.forEach((s, i) => { if (i !== current) setTimeout(() => s.classList.remove('prev'), 1600); });
+  }
+
+  function startAuto() { timer = setInterval(() => goTo(current + 1), 5000); }
+
+  dots.forEach(dot => dot.addEventListener('click', () => {
+    clearInterval(timer); goTo(parseInt(dot.dataset.index)); startAuto();
+  }));
+
+  startAuto();
+})(); } catch(e) {}
+
+// ─── FLOATING PETALS ───────────────────────────
+const container = document.getElementById('petalsContainer');
+for (let i = 0; i < 12; i++) {
+  const petal = document.createElement('div');
+  petal.classList.add('petal');
+  petal.style.cssText = `
+    left: ${Math.random() * 100}vw;
+    top: ${Math.random() * -200}px;
+    width: ${6 + Math.random() * 8}px;
+    height: ${6 + Math.random() * 8}px;
+    animation-duration: ${8 + Math.random() * 12}s;
+    animation-delay: ${Math.random() * 10}s;
+    opacity: 0;
+  `;
+  container.appendChild(petal);
+}
+
+// ─── TESTIMONIAL SLIDER ─────────────────────────
+let currentSlide = 0;
+const track = document.getElementById('testiTrack');
+const dots = document.querySelectorAll('.testi-dot');
+function goToSlide(index) {
+  currentSlide = index;
+  track.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach((d,i) => d.classList.toggle('active', i === index));
+}
+dots.forEach(dot => dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.index))));
+setInterval(() => goToSlide((currentSlide + 1) % 3), 5500);
+
+// ─── COUNTER ANIMATION ─────────────────────────
+const countersAnimated = new Set();
+function animateCounters() {
+  document.querySelectorAll('.counter-animate').forEach(el => {
+    if (countersAnimated.has(el)) return;
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      countersAnimated.add(el);
+      const target = parseInt(el.dataset.target);
+      const duration = 2000;
+      const step = target / (duration / 16);
+      let current = 0;
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = Math.round(current);
+        if (current >= target) clearInterval(timer);
+      }, 16);
+    }
+  });
+}
+window.addEventListener('scroll', animateCounters);
+animateCounters();
+
+// ─── WHATSAPP ENROLLMENT ───────────────────────
+function sendToWhatsApp() {
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const course = document.getElementById('course').value;
+  const startDate = document.getElementById('startDate').value;
+  if (!firstName || !phone || !course) {
+    alert('Please fill in your name, phone number and course of interest.');
+    return;
+  }
+  const message = `Hello Beniel's Beauty College! 🌸
+
+I would like to enroll in your program. Here are my details:
+
+*Name:* ${firstName} ${lastName}
+*Phone:* ${phone}
+*Email:* ${email || 'Not provided'}
+*Course:* ${course}
+*Preferred Start:* ${startDate || 'Flexible'}
+
+Kindly guide me through the enrollment process. Thank you!`;
+  const url = `https://wa.me/254701771595?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+
+// ─── SMOOTH SCROLL ─────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// ─── AT BENIELS SLIDESHOW ──────────────────────
+try { (function() {
+  const track = document.getElementById('benielsTrack');
+  const dots = document.querySelectorAll('#benielsDots .slideshow-dot');
+  const totalSlides = 7;
+  let current = 0;
+  let autoTimer;
+
+  function goTo(index) {
+    current = (index + totalSlides) % totalSlides;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function startAuto() {
+    autoTimer = setInterval(() => goTo(current + 1), 3500);
+  }
+
+  document.getElementById('benielsNext').addEventListener('click', () => { clearInterval(autoTimer); goTo(current + 1); startAuto(); });
+  document.getElementById('benielsPrev').addEventListener('click', () => { clearInterval(autoTimer); goTo(current - 1); startAuto(); });
+  dots.forEach(dot => dot.addEventListener('click', () => { clearInterval(autoTimer); goTo(parseInt(dot.dataset.index)); startAuto(); }));
+  startAuto();
+  })(); } catch(e) {}
+
+// ─── CLASS OF 2025 SLIDESHOW ───────────────────
+try { (function() {
+  const track = document.getElementById('gradTrack');
+  const dots = document.querySelectorAll('#gradDots .grad-slideshow-dot');
+  const totalSlides = dots.length || 1;
+  let current = 0;
+  let autoTimer;
+
+  function goTo(index) {
+    current = (index + totalSlides) % totalSlides;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function startAuto() {
+    autoTimer = setInterval(() => goTo(current + 1), 4000);
+  }
+
+  const gradNext = document.getElementById('gradNext');
+  const gradPrev = document.getElementById('gradPrev');
+  if (gradNext) gradNext.addEventListener('click', () => { clearInterval(autoTimer); goTo(current + 1); startAuto(); });
+  if (gradPrev) gradPrev.addEventListener('click', () => { clearInterval(autoTimer); goTo(current - 1); startAuto(); });
+  dots.forEach(dot => dot.addEventListener('click', () => { clearInterval(autoTimer); goTo(parseInt(dot.dataset.index)); startAuto(); }));
+  if (totalSlides > 1) startAuto();
+})(); } catch(e) {}
+
+</script>
+</body>
+</html>
